@@ -5,7 +5,7 @@ fetch(genres_list_http + new URLSearchParams({
 }))
 .then(res => res.json())
 .then(data => {
-    data.genres.forEach(item => {
+        data.genres.forEach(item => {
     fetchMoviesListByGenres(item.id, item.name);
 })
 });
